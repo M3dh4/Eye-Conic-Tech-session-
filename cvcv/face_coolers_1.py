@@ -2,15 +2,12 @@ import cv2
 import mediapipe as mp
 import numpy as np
 
-# Load overlay image (must be RGBA: includes transparency)
-overlay_img = cv2.imread("Downloads/Testing_-removebg-preview.png", cv2.IMREAD_UNCHANGED)
+overlay_img = cv2.imread("Eye-Conic-Tech-session-/cvcv/Testing_-removebg-preview.png", cv2.IMREAD_UNCHANGED)
 
-# MediaPipe Face Mesh
 mp_face_mesh = mp.solutions.face_mesh
 face_mesh = mp_face_mesh.FaceMesh(static_image_mode=False, max_num_faces=1, refine_landmarks=True)
 
-# Webcam
-cap = cv2.VideoCapture(1)  # Change to 1 if needed
+cap = cv2.VideoCapture(1) 
 
 def overlay_transparent(background, overlay, x, y, overlay_size=None):
     if overlay_size:

@@ -2,7 +2,7 @@ import cv2
 import mediapipe as mp
 import numpy as np
 
-overlay_img = cv2.imread("Downloads/Testing_-removebg-preview.png", cv2.IMREAD_UNCHANGED)
+overlay_img = cv2.imread("Eye-Conic-Tech-session-/cvcv/Testing_-removebg-preview.png", cv2.IMREAD_UNCHANGED)
 
 mp_face_mesh = mp.solutions.face_mesh
 face_mesh = mp_face_mesh.FaceMesh(static_image_mode=False, max_num_faces=1, refine_landmarks=True)
